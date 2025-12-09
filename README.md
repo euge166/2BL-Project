@@ -68,5 +68,10 @@ assets move together.
 ### Convergence verification
   Monte carlo simulations should stabilize as the number of paths increases. i.e. Law of large numbers. To verify this, We can change
   the values of nPaths in increasing increments to see how the prices tend towards 10.45
-  
+
+
+
+#### Some resources I used:
+
+https://www.notion.so/Sources-29baad7fb979800caf64dcab92dac7c9?source=copy_link
   
