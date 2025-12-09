@@ -45,7 +45,7 @@ assets move together.
   max( 0.5*S_T^A + 0.5*S_T^B - K, 0 )
 
 ### Compile
-  g++ -std=c++17 -O2 monte_carlo.cpp -o monte_carlo
+  g++ -std=c++17 -O2 monteCarloGBM.cpp -o monte_carlo
 ### Run
   ./monte_carlo
 
