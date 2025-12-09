@@ -24,6 +24,26 @@ I used vector-matrix multiplication between a 2x2 lower-triangular matrix, L and
 	•	sigma = volatility
 	•	T = time to maturity
 	•	Z ~ N(0, 1)
+  Asset prices face daily shocks which are normally distributed with large jumps being quite rare. We generate the normal distribution of 
+  shocks:
+  	normal_distribution<double> N01(0.0, 1.0);
+  A mean of 0 with a standard deviation of 1. Geometric Brownian Motion assumes this normal distribution of change for an asset over time.
+  By simulating the shocks nPaths amount of times for nPaths amount of futures, we can avearge the Monte Carlo prices along the Geometric
+  Brownian Motion.
+
+## Initial Values
+
+Hypothetical initial asset and strike values for clearest display of volatility:
+  S0 = 100			Initial Price
+  K = 100			Strike Value
+  
+  Risk neutral setting:
+  r = 0.05			Risk Free Interest Rate
+  mu = 0.05			Drift
+
+  sigma = 0.2    	Volatility
+  T = 1.0			Time to Maturity
+  nPaths = 200000	Number of Paths
   
 ### European Call Price:
   max(S_T - K, 0)
@@ -32,6 +52,9 @@ I used vector-matrix multiplication between a 2x2 lower-triangular matrix, L and
   exp(-r*T) * E[payoff]
 
 ## Correlated Basket Option
+
+Because of doubled diversification, the correlated 50/50 basket options have less volatility. This means that with lower volatility,
+there are lower chances of ending above the strike price, thus lower prices. We should see this expressed in the output of the model.
 
 ### Two correlated standard normals are generated using a 2x2 factorization:
   c1 = z1
@@ -68,8 +91,6 @@ I used vector-matrix multiplication between a 2x2 lower-triangular matrix, L and
 ### Convergence verification
   Monte carlo simulations should stabilize as the number of paths increases. i.e. Law of large numbers. To verify this, We can change
   the values of nPaths in increasing increments to see how the prices tend towards 10.45
-
-
 
 #### Some resources I used:
 
