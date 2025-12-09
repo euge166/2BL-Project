@@ -7,8 +7,8 @@ finds the differences between the stock price and the strike price and averages 
 which are only rights to purchase rather than actual stocks themselves, if the stock ends up below the strike price, the difference, or 
 Monte Carlo price, of that instance is set to 0. 
 
-I used Matrix-vector multiplication to turn the independent normal sample into a correlated sample which allows me to determine how the 
-assets move together. L is a 2x2 Lower-triangular matrix while z consists of independent 
+I used vector-matrix multiplication between a 2x2 lower-triangular matrix, L and a vector z, consisting of independent normals. The vector-matrix multiplication turns the independent normal sample into a correlated sample which allows me to determine how the 
+assets move together.
 
 ## What is output: 
   MC price (single asset)
