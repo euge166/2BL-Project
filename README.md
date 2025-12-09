@@ -63,7 +63,7 @@ assets move together.
   double S0 = 100, K = 100, r = 0.05, mu = 0.05, sigma = 0.2, T = 1.0;
   int nPaths = 200000;
   The Black-Scholes formula will yield C ~= 10.4506
-  Which is within 1 standard deviation with our expected output.
+  Which our expected output will contain in its confidence interval.
   
 ### Convergence verification
   Monte carlo simulations should stabilize as the number of paths increases. i.e. Law of large numbers. To verify this, We can change
