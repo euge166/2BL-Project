@@ -19,7 +19,7 @@ I used vector-matrix multiplication between a 2x2 lower-triangular matrix, L and
 ## Math Model
   Geometric Brownian Motion:
   S_T = S_0 * exp( (mu - 0.5*sigma^2)*T + sigma*sqrt(T)*Z )
-  •	S0 = initial price
+  	•	S0 = initial price
 	•	mu = drift
 	•	sigma = volatility
 	•	T = time to maturity
