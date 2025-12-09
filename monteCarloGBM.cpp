@@ -68,5 +68,7 @@ int main() {
     cout.setf(ios::fixed); cout<<setprecision(6);
     cout << "MC price (single asset): " << res.price << "\n"
          << "MC price (50/50 correlated basket): " << res2.price << "\n";
+         << "Standard Error  : " << res.stderr << "\n"
+         << "95% Confidence Interval  : [" << res.conf_low << ", " << res.conf_high << "]\n";
     return 0;
 }
