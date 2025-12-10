@@ -1,4 +1,9 @@
-// ...existing code...
+/* 
+Eugene Cho
+Math 2BL
+Proffessor: Jeff Anderson
+18 November 2025
+*/
 #include <iostream>
 #include <random>
 #include <vector>
