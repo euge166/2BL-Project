@@ -85,9 +85,15 @@ there are lower chances of ending above the strike price, thus lower prices. We 
   With same variables held constant:<br>
   double S0 = 100, K = 100, r = 0.05, mu = 0.05, sigma = 0.2, T = 1.0;<br>
   int nPaths = 200000;<br>
-  The Black-Scholes formula will yield C ~= 10.4506<br>
+  The Black-Scholes formula will yield C ~= 10.4492<br>
   Which our expected output will contain in its confidence interval.<br>
-  
+
+The following is a handwritten verification of this value. 
+[blackscholesverification.pdf](https://github.com/user-attachments/files/24065755/blackscholesverification.pdf)
+
+
+
+    
 ### Convergence verification
   Monte carlo simulations should stabilize as the number of paths increases. i.e. Law of large numbers. To verify this, We can change
   the values of nPaths in increasing increments to see how the prices tend towards 10.45
